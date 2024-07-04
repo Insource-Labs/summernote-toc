@@ -41,8 +41,8 @@
                 var tocHtml = '<ol class="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-family: Georgia, serif; font-size: 17px;">';
                 var previousLevel = 1;
                 var openTags = 0;
-                // finding only h1,h2 tags
-                $content.find('h1, h2').each(function () {
+                // finding only h1,h2,h3 tags
+                $content.find('h1, h2, h3').each(function () {
                     var tag = $(this).prop("tagName").toLowerCase();
                     var text = $(this).text();
                     var level = parseInt(tag.replace('h', ''), 10);
