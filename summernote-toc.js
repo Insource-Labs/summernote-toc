@@ -46,7 +46,7 @@
                     var tag = $(this).prop("tagName").toLowerCase();
                     var text = $(this).text();
                     var level = parseInt(tag.replace('h', ''), 10);
-                    var id = 'toc_' + text.replace(/\s+/g, '_').toLowerCase();
+                    var id = 'toc_' + text.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_').toLowerCase();
                     $(this).attr('id', id);
                     // ordering the h1 and h2
                     if (level > previousLevel) {
